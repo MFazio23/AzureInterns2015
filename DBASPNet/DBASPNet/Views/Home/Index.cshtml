@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Blue Sun - U.S. Factories";
+}
+
+<div class="blue-sun-logo">
+    <img src="~/Content/Images/Blue-Sun-Mild.png" />
+</div>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Currency</th>
+        <th>Street Address</th>
+        <th>Zip Code</th>
+    </tr>
+    @foreach (var f in ViewBag.Factories)
+    {
+        <tr>
+            <td>@f.ID</td>
+            <td>@f.City</td>
+            <td>@f.State</td>
+            <td>@f.Country</td>
+            <td>@f.Currency</td>
+            <td>@f.StreetAddress</td>
+            <td>@f.ZipCode</td>
+        </tr>
+    }
+</table>
